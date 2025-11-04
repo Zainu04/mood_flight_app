@@ -1,23 +1,108 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UFT-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mood Flight App</title>
-        <link rel="stylesheet" href="static/style.css">
-        <script defer src="static/script.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Flight App</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script defer src="../static/script.js"></script>
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <nav>
+        <div class="nav_logo">Mood Flights</div>
+        <ul class="nav_linls">
+            <li><a href="/">Home</a></li>
+            <li><a href="/flights">Flights</a></li>
+            <li><a href="/stays">Stays</a></li>
+            <li><a href="/cars">Cars</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+        <button class="btn">Contact</button>
+        </nav>
+    </header>
 
-    <body>
-        <header>
-            <nav>
-                <a href="">Home</a>
-                <a href="">Flights</a>
-                <a href="">Stays</a>
-                <a href="">Cars</a>
-                <a href="">About</a>
-                <a href="">Contact</a>
-            </nav>
-        </header>
-    </body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Discover Flights That Match Your Mood</h1>
+        <p>Let your feelings guide your next destination. Explore, stay, and drive your journey, all in one place.</p>
+        <a href="/flights">
+            <button class="cta-btn">Get Started</button>
+        </a>
+    </div>
+    <!--Booking Form-->
+  <section class="booking">
+    <div class="booking_nav">
+        <span>One Way</span>
+        <span>Round Trip</span>
+    </div>
+    <form>
+        <div class="form_group">
+          <span><i class="ri-map-pin-line"></i></span>
+          <div class="input_content">
+            <div class="input_group">
+                <input type="text">
+                <label>Location</label>
+            </div>
+            <p>Where are you going?</p>
+          </div>
+        </div>
+        <div class="form_group">
+            <span><i class="ri-user-3-line"></i></span>
+            <div class="input_content">
+                <div class="input_group">
+                    <input type="number">
+                    <label>Traveler</label>
+                </div>
+                <p>Add guests</p>
+            </div>
+        </div>
+        <div class="form_group">
+            <span><i class="ri-calender-line"></i></span>
+            <div class="input_content">
+                <div class="input_group">
+                    <input type="text">
+                    <label>Departure</label>
+            </div>
+                <p>Add Date</p>
+            </div>
+        </div>
+        <div class="form_group">
+            <span><i class="ri-calendar-line"></i></span>
+            <div class="input_content">
+                <div class="input_group">
+                    <input type="text">
+                    <label>Return</label>
+                </div>
+                <p>Add date</p>
+            </div>
+        </div>
+        <button class="btn"><i class="ri-search-line"></i></button>
+    </form>
+  </section>
+    <!-- Main Features Section -->
+    <section class="features">
+        <div class="feature">
+            <img src="/static/images/plane.png" alt="Flights">
+            <h2>Find Flights</h2>
+            <p>Explore destinations curated for your mood - adventure, relaxation, or romance.</p>
+        </div>
+        <div class="feature">
+            <img src="/static/images/hotel.png" alt="Stays">
+            <h2>Book Stays</h2>
+            <p>Discover cozy stays that fit your travel vibe and comfort level.</p>
+        </div>
+        <div class="feature">
+            <img src="/static/images/car.png" alt="Cars">
+            <h2>Rent Cars</h2>
+            <p>Choose cars that match your journey style - sleek, practical, or fun.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Mood Flight. All rights reserved.</p>
+    </footer>
+</body>
 </html>
