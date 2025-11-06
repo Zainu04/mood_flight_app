@@ -10,19 +10,32 @@
 <body>
     <!-- Header / Navigation -->
     <header>
-        <nav>
-        <div class="nav_logo">Mood Flights</div>
-        <ul class="nav_linls">
-            <li><a href="/">Home</a></li>
-            <li><a href="/flights">Flights</a></li>
-            <li><a href="/stays">Stays</a></li>
-            <li><a href="/cars">Cars</a></li>
-            <li><a href="/about">About</a></li>
-        </ul>
-        <button class="btn">Contact</button>
-        </nav>
-    </header>
-
+        <div class="nav_container">
+          <!-- Logo -->
+          <div class="nav_logo">Mood Flights</div>
+      
+          <!-- Hamburger Menu Icon -->
+          <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+      
+          <!-- Navigation Links (includes Contact button inside menu) -->
+          <nav class="nav_menu">
+            <ul class="nav_links">
+              <li><a href="/">Home</a></li>
+              <li><a href="/flights">Flights</a></li>
+              <li><a href="/stays">Stays</a></li>
+              <li><a href="/cars">Cars</a></li>
+              <li><a href="/about">About</a></li>
+            </ul>
+            <a href="/contact" class="nav_btn">Contact</a>
+          </nav>
+        </div>
+      </header>
+      
+      
     <!-- Hero Section -->
     <div class="hero">
         <h1>Discover Flights That Match Your Mood</h1>
