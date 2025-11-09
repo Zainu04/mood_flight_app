@@ -83,8 +83,10 @@ document.addEventListener("DOMContentLoaded", () => {
       else if (btn.dataset.action === "decrement" && travelers[type] > 0) travelers[type]--;
 
       // Update the counter inside the dropdown
-      const counterSpan = document.getElementById(`${type}-count`);
+      let idMap = { adults: "adult-count", children: "children-count", infants: "infants-count" };
+      const counterSpan = document.getElementById(idMap[type]);
       if (counterSpan) counterSpan.textContent = travelers[type];
+  
 
       // Update the input field
       updateTravelersInput();

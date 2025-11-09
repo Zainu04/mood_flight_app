@@ -339,15 +339,25 @@ footer {
 
 .counter_group {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
 }
 
-.counter_group span {
+/* Fixed width for labels so buttons align */
+.counter_group span.label {
+  width: 70px; /* adjust if needed */
   font-size: 0.9rem;
+  text-align: left;
 }
 
+/* Counter styling */
+.count {
+  width: 25px; /* fixed width */
+  text-align: center;
+  margin: 0 5px;
+}
+
+/* Buttons */
 .traveler-btn {
   width: 28px;
   height: 28px;
@@ -356,6 +366,9 @@ footer {
   background: #007bff;
   color: #fff;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .traveler-btn:hover {
