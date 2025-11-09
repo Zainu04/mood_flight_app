@@ -53,18 +53,19 @@
       <!-- From -->
       <div class="form_group">
         <label for="from">From</label>
-        <input type="text" id="from" placeholder="Enter departure airport">
+        <input type="text" id="from" list="airports" placeholder="Enter departure airport">
+        <datalist id="airports"></datalist>
       </div>
 
       <!-- To -->
       <div class="form_group">
         <label for="to">To</label>
-        <input type="text" id="to" placeholder="Destination airport">
+        <input type="text" id="to" list="airports" placeholder="Destination airport">
       </div>
 
       <!-- Departure Date -->
       <div class="form_group">
-        <label for="departure">Departure</label>
+        <label for="departure">Departure Date</label>
         <input type="text" id="departure" placeholder="Select departure date" readonly>
       </div>
 
@@ -75,16 +76,48 @@
       </div>
 
       <!-- Travelers -->
-      <div class="form_group">
+     <!--<div class="form_group">
         <label for="travelers">Travelers</label>
         <input type="text" id="travelers" placeholder="1 Adult, 0 Children, 0 Infants">
-      </div>
+      </div>-->
+
+      <!-- Travelers -->
+
+<!-- Travelers -->
+<div class="form_group">
+  <label for="travelers">Travelers</label>
+  <input type="text" id="travelers" readonly placeholder="1 Adult">
+
+  <!-- Dropdown panel -->
+  <div class="travelers_panel">
+    <div class="counter_group">
+      <span>Adults</span>
+      <button type="button" class="traveler-btn" data-type="adults" data-action="decrement">-</button>
+      <span class="count" id="adult-count">1</span>
+      <button type="button" class="traveler-btn" data-type="adults" data-action="increment">+</button>
+    </div>
+    <div class="counter_group">
+      <span>Children</span>
+      <button type="button" class="traveler-btn" data-type="children" data-action="decrement">-</button>
+      <span class="count" id="children-count">0</span>
+      <button type="button" class="traveler-btn" data-type="children" data-action="increment">+</button>
+    </div>
+    <div class="counter_group">
+      <span>Infants</span>
+      <button type="button" class="traveler-btn" data-type="infants" data-action="decrement">-</button>
+      <span class="count" id="infants-count">0</span>
+      <button type="button" class="traveler-btn" data-type="infants" data-action="increment">+</button>
+    </div>
+  </div>
+</div>
+
 
       <!-- Search Button -->
       <button type="submit" class="btn">Search Flights</button>
     </form>
   </section>
 
+  
   <!-- Main Features Section -->
   <section class="features">
     <div class="feature">
