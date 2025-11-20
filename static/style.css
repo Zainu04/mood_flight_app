@@ -115,6 +115,7 @@ header {
 .hero h1 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
+  margin-top: 45px;
 }
 
 .hero p {
@@ -139,8 +140,10 @@ header {
   transform: scale(1.05);
 }
 
-/* Booking Form */
-  .booking {
+/* -----------------------
+   BOOKING FORM CONTAINER
+------------------------ */
+.booking {
   max-width: 1200px;
   margin: -4rem auto 4rem auto;
   background: #fff;
@@ -149,11 +152,14 @@ header {
   box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
+/* -----------------------
+   TABS (One Way / Round Trip)
+------------------------ */
 .booking_nav {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .booking_nav span {
@@ -163,7 +169,8 @@ header {
   font-weight: 600;
   color: #007bff;
   background: #f0f5ff;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+  user-select: none;
 }
 
 .booking_nav span.active {
@@ -171,26 +178,24 @@ header {
   color: #fff;
 }
 
+/* -----------------------
+   GRID LAYOUT
+------------------------ */
 .booking form {
   display: grid;
-  grid-template-columns: repeat(4, 1fr) auto;
+  grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
   align-items: end;
 }
 
-.booking .form_group {
+/* Inputs */
+.form_group {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
 }
 
-.booking .form_group label {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #333;
-}
-
-.booking .form_group input {
+.form_group input {
   padding: 0.6rem 1rem;
   border-radius: 10px;
   border: 1px solid #ccc;
@@ -200,26 +205,96 @@ header {
   width: 100%;
 }
 
-.booking .form_group input:focus {
+.form_group input:focus {
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0,123,255,0.3);
 }
 
-.booking .btn {
-  background: #007bff;
-  color: #fff;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
+/* -----------------------
+   TRAVELERS DROPDOWN FIX
+------------------------ */
+.travelers_wrapper {
+  position: relative;
 }
 
-.booking .btn:hover {
+.travelers_panel {
+  display: none;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  top: 70px;
+  left: 0;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.input_icon_wrap {
+  position: relative;
+  width: 100%;
+}
+
+.input_icon_wrap .input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.input_icon_wrap input {
+  width: 100%;
+  padding-left: 42px !important;
+  box-sizing: border-box;
+}
+
+.input_icon_wrap .traveler-icon {
+  width: 22px; 
+  height: 22px;
+}
+
+
+/* -----------------------
+   FULL-WIDTH SEARCH BUTTON
+------------------------ */
+.search-btn {
+  grid-column: 1 / -1;
+  justify-self: center;
+  padding: 1rem 2rem;
+  background: #007bff;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.search-btn:hover {
   background: #0056b3;
   transform: scale(1.05);
 }
+
+/* -----------------------
+   RESPONSIVE FIX
+------------------------ */
+@media (max-width: 992px) {
+  .booking form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .booking form {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* Features Section */
 .features {

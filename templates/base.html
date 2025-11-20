@@ -42,74 +42,93 @@
     </a>
   </div>
 
-  <!-- Booking Form -->
   <section class="booking">
     <div class="booking_nav">
       <span class="active">One Way</span>
       <span>Round Trip</span>
     </div>
-
+  
     <form autocomplete="off">
-      <!-- From -->
+  
+      <!-- FROM -->
       <div class="form_group">
         <label for="from">From</label>
-        <input type="text" id="from" list="airports" placeholder="Enter departure airport">
+        <div class="input_icon_wrap">
+          <img src="../static/images/location.png" class="input-icon" alt="From">
+          <input type="text" id="from" list="airports" placeholder="Enter departure airport">
+        </div>
         <datalist id="airports"></datalist>
       </div>
-
-      <!-- To -->
+  
+      <!-- TO -->
       <div class="form_group">
         <label for="to">To</label>
-        <input type="text" id="to" list="airports" placeholder="Destination airport">
+        <div class="input_icon_wrap">
+          <img src="../static/images/destination.png" class="input-icon" alt="To">
+          <input type="text" id="to" list="airports" placeholder="Destination airport">
+        </div>
       </div>
-
-      <!-- Departure Date -->
+  
+      <!-- DEPARTURE DATE -->
       <div class="form_group">
         <label for="departure">Departure Date</label>
-        <input type="text" id="departure" placeholder="Select departure date" readonly>
+        <div class="input_icon_wrap">
+          <img src="../static/images/calendar.png" class="input-icon" alt="Departure Date">
+          <input type="text" id="departure" placeholder="Select departure date" readonly>
+        </div>
       </div>
-
-      <!-- Return Date -->
+  
+      <!-- RETURN DATE -->
       <div class="form_group" id="return-group">
         <label for="return">Return</label>
-        <input type="text" id="return" placeholder="Select return date" readonly>
+        <div class="input_icon_wrap">
+          <img src="../static/images/calendar.png" class="input-icon" alt="Return Date">
+          <input type="text" id="return" placeholder="Select return date" readonly>
+        </div>
       </div>
-
-     
-<!-- Travelers -->
-<div class="form_group">
-  <label for="travelers">Travelers</label>
-  <input type="text" id="travelers" readonly placeholder="1 Adult">
-
-  <!-- Dropdown panel -->
-  <div class="travelers_panel">
-    <div class="counter_group">
-      <span class="label">Adults</span>
-      <button type="button" class="traveler-btn" data-type="adults" data-action="decrement">-</button>
-      <span class="count" id="adult-count">1</span>
-      <button type="button" class="traveler-btn" data-type="adults" data-action="increment">+</button>
-    </div>
-    <div class="counter_group">
-      <span class="label">Children</span>
-      <button type="button" class="traveler-btn" data-type="children" data-action="decrement">-</button>
-      <span class="count" id="children-count">0</span>
-      <button type="button" class="traveler-btn" data-type="children" data-action="increment">+</button>
-    </div>
-    <div class="counter_group">
-      <span class="label">Infants</span>
-      <button type="button" class="traveler-btn" data-type="infants" data-action="decrement">-</button>
-      <span class="count" id="infants-count">0</span>
-      <button type="button" class="traveler-btn" data-type="infants" data-action="increment">+</button>
-    </div>
-    
-</div>
-
-
-      <!-- Search Button -->
-      <button type="submit" class="btn">Search Flights</button>
+  
+      <!-- TRAVELERS -->
+      <div class="form_group travelers_wrapper">
+        <label for="travelers">Travelers</label>
+        <div class="input_icon_wrap">
+          <img src="../static/images/person.png" class="input-icon" alt="Travelers">
+          <input type="text" id="travelers" readonly placeholder="1 Adult">
+        </div>
+  
+        <!-- Dropdown Panel -->
+        <div class="travelers_panel">
+          <div class="counter_group">
+            <span class="label">Adults</span>
+            <button type="button" class="traveler-btn" data-type="adults" data-action="decrement">-</button>
+            <span class="count" id="adult-count">1</span>
+            <button type="button" class="traveler-btn" data-type="adults" data-action="increment">+</button>
+          </div>
+  
+          <div class="counter_group">
+            <span class="label">Children</span>
+            <button type="button" class="traveler-btn" data-type="children" data-action="decrement">-</button>
+            <span class="count" id="children-count">0</span>
+            <button type="button" class="traveler-btn" data-type="children" data-action="increment">+</button>
+          </div>
+  
+          <div class="counter_group">
+            <span class="label">Infants</span>
+            <button type="button" class="traveler-btn" data-type="infants" data-action="decrement">-</button>
+            <span class="count" id="infants-count">0</span>
+            <button type="button" class="traveler-btn" data-type="infants" data-action="increment">+</button>
+          </div>
+        </div>
+      </div>
+  
+      <!-- SEARCH BUTTON -->
+      <button type="submit" class="btn search-btn">Search Flights</button>
+  
     </form>
   </section>
-
+  
+  
+  
+   
   
   <!-- Main Features Section -->
   <section class="features">
