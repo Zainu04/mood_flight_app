@@ -42,6 +42,8 @@
     </a>
   </div>
 
+  <!--Booking Form-->
+
   <section class="booking">
     <div class="booking_nav">
       <span class="active">One Way</span>
@@ -49,106 +51,121 @@
     </div>
   
     <form autocomplete="off">
+      <div class="form_fields_wrapper">
   
-      <!-- FROM -->
-      <div class="form_group">
-        <label for="from">From</label>
-        <div class="input_icon_wrap">
-          <img src="../static/images/location.png" class="input-icon" alt="From">
-          <input type="text" id="from" list="airports" placeholder="Enter departure airport">
-        </div>
-        <datalist id="airports"></datalist>
-      </div>
-  
-      <!-- TO -->
-      <div class="form_group">
-        <label for="to">To</label>
-        <div class="input_icon_wrap">
-          <img src="../static/images/destination.png" class="input-icon" alt="To">
-          <input type="text" id="to" list="airports" placeholder="Destination airport">
-        </div>
-      </div>
-  
-      <!-- DEPARTURE DATE -->
-      <div class="form_group">
-        <label for="departure">Departure Date</label>
-        <div class="input_icon_wrap">
-          <img src="../static/images/calendar.png" class="input-icon" alt="Departure Date">
-          <input type="text" id="departure" placeholder="Select departure date" readonly>
-        </div>
-      </div>
-  
-      <!-- RETURN DATE -->
-      <div class="form_group" id="return-group">
-        <label for="return">Return</label>
-        <div class="input_icon_wrap">
-          <img src="../static/images/calendar.png" class="input-icon" alt="Return Date">
-          <input type="text" id="return" placeholder="Select return date" readonly>
-        </div>
-      </div>
-  
-      <!-- TRAVELERS -->
-      <div class="form_group travelers_wrapper">
-        <label for="travelers">Travelers</label>
-        <div class="input_icon_wrap">
-          <img src="../static/images/person.png" class="input-icon" alt="Travelers">
-          <input type="text" id="travelers" readonly placeholder="1 Adult">
-        </div>
-  
-        <!-- Dropdown Panel -->
-        <div class="travelers_panel">
-          <div class="counter_group">
-            <span class="label">Adults</span>
-            <button type="button" class="traveler-btn" data-type="adults" data-action="decrement">-</button>
-            <span class="count" id="adult-count">1</span>
-            <button type="button" class="traveler-btn" data-type="adults" data-action="increment">+</button>
+        <!-- FROM -->
+        <div class="form_group">
+          <label for="from">From</label>
+          <div class="input_icon_wrap">
+            <img src="../static/images/location.png" class="input-icon" alt="From">
+            <input type="text" id="from" list="airports" placeholder="Enter departure airport">
           </div>
+          <datalist id="airports"></datalist>
+        </div>
   
-          <div class="counter_group">
-            <span class="label">Children</span>
-            <button type="button" class="traveler-btn" data-type="children" data-action="decrement">-</button>
-            <span class="count" id="children-count">0</span>
-            <button type="button" class="traveler-btn" data-type="children" data-action="increment">+</button>
-          </div>
-  
-          <div class="counter_group">
-            <span class="label">Infants</span>
-            <button type="button" class="traveler-btn" data-type="infants" data-action="decrement">-</button>
-            <span class="count" id="infants-count">0</span>
-            <button type="button" class="traveler-btn" data-type="infants" data-action="increment">+</button>
+        <!-- TO -->
+        <div class="form_group">
+          <label for="to">To</label>
+          <div class="input_icon_wrap">
+            <img src="../static/images/destination.png" class="input-icon" alt="To">
+            <input type="text" id="to" list="airports" placeholder="Destination airport">
           </div>
         </div>
-      </div>
+  
+        <!-- DEPARTURE DATE -->
+        <div class="form_group">
+          <label for="departure">Departure Date</label>
+          <div class="input_icon_wrap">
+            <img src="../static/images/calendar.png" class="input-icon" alt="Departure Date">
+            <input type="text" id="departure" placeholder="Select departure date" readonly>
+          </div>
+        </div>
+  
+        <!-- RETURN DATE -->
+        <div class="form_group" id="return-group">
+          <label for="return">Return</label>
+          <div class="input_icon_wrap">
+            <img src="../static/images/calendar.png" class="input-icon" alt="Return Date">
+            <input type="text" id="return" placeholder="Select return date" readonly>
+          </div>
+        </div>
+  
+        <!-- TRAVELERS -->
+        <div class="form_group travelers_wrapper">
+          <label for="travelers">Travelers</label>
+          <div class="input_icon_wrap">
+            <img src="../static/images/person.png" class="input-icon traveler-icon" alt="Travelers">
+            <input type="text" id="travelers" readonly placeholder="1 Adult">
+          </div>
+  
+          <!-- Dropdown Panel -->
+          <div class="travelers_panel">
+            <div class="counter_group">
+              <span class="label">Adults</span>
+              <button type="button" class="traveler-btn" data-type="adults" data-action="decrement">-</button>
+              <span class="count" id="adult-count">1</span>
+              <button type="button" class="traveler-btn" data-type="adults" data-action="increment">+</button>
+            </div>
+  
+            <div class="counter_group">
+              <span class="label">Children</span>
+              <button type="button" class="traveler-btn" data-type="children" data-action="decrement">-</button>
+              <span class="count" id="children-count">0</span>
+              <button type="button" class="traveler-btn" data-type="children" data-action="increment">+</button>
+            </div>
+  
+            <div class="counter_group">
+              <span class="label">Infants</span>
+              <button type="button" class="traveler-btn" data-type="infants" data-action="decrement">-</button>
+              <span class="count" id="infants-count">0</span>
+              <button type="button" class="traveler-btn" data-type="infants" data-action="increment">+</button>
+            </div>
+          </div>
+        </div>
+  
+      </div> 
   
       <!-- SEARCH BUTTON -->
-      <button type="submit" class="btn search-btn">Search Flights</button>
+      <div class="search_btn_wrapper">
+        <button type="submit" class="btn search-btn">Search Flights</button>
+      </div>
   
     </form>
   </section>
   
-  
-  
-   
-  
   <!-- Main Features Section -->
   <section class="features">
     <div class="feature">
-      <img src="/static/images/plane.png" alt="Flights">
-      <h2>Find Flights</h2>
-      <p>Explore destinations curated for your mood - adventure, relaxation, or romance.</p>
+      <div class="feature-image">
+        <img src="../static/images/flight.jpg" alt="Flights">
+      </div>
+      <div class="feature-text">
+        <h2>Find Flights</h2>
+        <p>Explore destinations curated for your mood – adventure, relaxation, or romance.</p>
+      </div>
     </div>
+  
     <div class="feature">
-      <img src="/static/images/hotel.png" alt="Stays">
-      <h2>Book Stays</h2>
-      <p>Discover cozy stays that fit your travel vibe and comfort level.</p>
+      <div class="feature-image">
+        <img src="../static/images/hotel.jpg" alt="Stays">
+      </div>
+      <div class="feature-text">
+        <h2>Book Stays</h2>
+        <p>Discover cozy stays that fit your travel vibe and comfort level.</p>
+      </div>
     </div>
+  
     <div class="feature">
-      <img src="/static/images/car.png" alt="Cars">
-      <h2>Rent Cars</h2>
-      <p>Choose cars that match your journey style - sleek, practical, or fun.</p>
+      <div class="feature-image">
+        <img src="../static/images/cars.jpg" alt="Cars">
+      </div>
+      <div class="feature-text">
+        <h2>Rent Cars</h2>
+        <p>Choose cars that match your journey style – sleek, practical, or fun.</p>
+      </div>
     </div>
   </section>
-
+  
   <!-- Footer -->
   <footer>
     <p>© 2025 Mood Flight. All rights reserved.</p>

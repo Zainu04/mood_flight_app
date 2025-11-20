@@ -140,9 +140,9 @@ header {
   transform: scale(1.05);
 }
 
-/* -----------------------
+/* =======================================
    BOOKING FORM CONTAINER
------------------------- */
+======================================= */
 .booking {
   max-width: 1200px;
   margin: -4rem auto 4rem auto;
@@ -159,7 +159,7 @@ header {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .booking_nav span {
@@ -183,9 +183,23 @@ header {
 ------------------------ */
 .booking form {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
   align-items: end;
+}
+
+/* Default Round Trip layout */
+.form_fields_wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) auto;
+  gap: 1rem;
+  align-items: end;
+  justify-content: center;
+}
+
+/* One Way centered layout */
+.form_fields_wrapper.one-way {
+  grid-template-columns: repeat(3, 250px);
+  justify-content: center;
 }
 
 /* Inputs */
@@ -231,6 +245,9 @@ header {
   z-index: 10;
 }
 
+/* -----------------------
+   ICONS INSIDE INPUTS
+------------------------ */
 .input_icon_wrap {
   position: relative;
   width: 100%;
@@ -247,17 +264,16 @@ header {
   pointer-events: none;
 }
 
-.input_icon_wrap input {
-  width: 100%;
-  padding-left: 42px !important;
-  box-sizing: border-box;
-}
-
 .input_icon_wrap .traveler-icon {
   width: 22px; 
   height: 22px;
 }
 
+.input_icon_wrap input {
+  width: 100%;
+  padding-left: 42px !important;
+  box-sizing: border-box;
+}
 
 /* -----------------------
    FULL-WIDTH SEARCH BUTTON
@@ -275,10 +291,30 @@ header {
   transition: 0.3s ease;
 }
 
+.search_btn_wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.search-btn {
+  padding: 1rem 2rem;
+  margin-top: 15px;
+  background: #007bff;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
 .search-btn:hover {
   background: #0056b3;
   transform: scale(1.05);
 }
+
 
 /* -----------------------
    RESPONSIVE FIX
@@ -306,34 +342,46 @@ header {
 }
 
 .feature {
-  text-align: center;
   background: #fff;
-  padding: 2rem;
   border-radius: 15px;
-  width: 280px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  width: 300px; /* or adjust as needed */
+  overflow: hidden; /* ensures the image doesn’t spill out */
+  display: flex;
+  flex-direction: column;
 }
 
-.feature:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+/* Container for the image */
+.feature-image {
+  width: 100%;
+  height: 180px; /* adjust to control how much of the card is image */
+  overflow: hidden;
 }
 
-.feature img {
-  width: 80px;
-  margin-bottom: 1rem;
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* covers area, may crop, but keeps aspect ratio */
 }
 
-.feature h2 {
+/* Text section below the image */
+.feature-text {
+  padding: 1rem;
+  text-align: center;
+}
+
+.feature-text h2 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
-.feature p {
+.feature-text p {
   font-size: 0.9rem;
   color: #555;
 }
+
+
+
 
 /* Footer */
 footer {
