@@ -345,10 +345,11 @@ header {
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  width: 300px; /* or adjust as needed */
-  overflow: hidden; /* ensures the image doesn’t spill out */
+  width: 300px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s; /* animation */
 }
 
 /* Container for the image */
@@ -380,6 +381,29 @@ header {
   color: #555;
 }
 
+.feature:hover {
+  transform: translateY(-10px); /* lifts the card on hover */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* emphasizes the lift */
+}
+
+.features-header .section-header {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 70px;
+  margin-bottom: -50px;
+}
+
+.features-header .section-header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.features-header .section-header p {
+  font-size: 1rem;
+  color: #555;
+}
 
 
 
