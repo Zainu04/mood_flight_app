@@ -110,3 +110,25 @@ document.addEventListener("DOMContentLoaded", () => {
     navMenu.classList.toggle("active");
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const features = document.querySelectorAll(".features .feature");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target); // animate only once
+        }
+      });
+    },
+    {
+      threshold: 0.4 // trigger when 20% of the card is visible
+    }
+  );
+
+  features.forEach(feature => {
+    observer.observe(feature);
+  });
+});

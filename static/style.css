@@ -406,6 +406,17 @@ header {
 }
 
 
+.features .feature {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.features .feature.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* Footer */
 footer {
